@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Register Form</title>
+  <style>
+    .my-box {
+      width: 400px;
+      height: 400px;
+      background:  pink;
+      border: 3px solid ;
+      padding: 20px;
+      margin: 30px auto;
+      text-align: center;
+      color: white;
+    }
+
+    input[type="text"] {
+      padding: 5px;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="my-box">
+    <h1>Register Form</h1>
+    <p>First Name:</p>
+    <input type="text" placeholder="Enter first name">
+    <p>Last Name:</p>
+    <input type="text" placeholder="Enter last name">
+  </div>
+
+</body>
+</html>
