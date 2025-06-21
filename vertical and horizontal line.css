@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .vertical-line {
+      width: 2px;
+      height: 100px;
+      background-color: red;
+      margin: 20px auto;
+    }
+
+    .horizontal-line {
+      height: 2px;
+      width: 80%;
+      background-color: blue;
+      margin: 20px auto;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Horizontal Line</h2>
+  <div class="horizontal-line"></div>
+
+  <h2>Vertical Line</h2>
+  <div class="vertical-line"></div>
+
+</body>
+</html>
