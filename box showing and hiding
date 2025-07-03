@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Show and Hide Box</title>
+  <style>
+    /* This styles the box */
+    #myBox {
+      width: 200px;
+      height: 150px;
+      background-color: lightblue;
+      display: none; /* Start with the box hidden */
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Buttons -->
+  <button onclick="showBox()">Show</button>
+  <button onclick="hideBox()">Hide</button>
+
+  <!-- The box -->
+  <div id="myBox"></div>
+
+  <!-- JavaScript Code -->
+  <script>
+    // This function shows the box
+    function showBox() {
+      document.getElementById("myBox").style.display = "block";
+    }
+
+    // This function hides the box
+    function hideBox() {
+      document.getElementById("myBox").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
