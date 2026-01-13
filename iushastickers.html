@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sweet Sticker Garden 🍫🧋</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --choco-dark: #8B4513;
+  --choco-mid: #D2691E;
+  --choco-light: #E6C7A2;
+  --cream: #FFF6EC;
+  --accent: #F3D7C2;
+  --text: #3b2a20;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins',sans-serif; }
+body { background: linear-gradient(135deg,var(--choco-light),var(--cream)); color: var(--text); }
+
+nav { position: sticky; top:0; z-index:100; background: rgba(255,246,236,0.85); backdrop-filter: blur(10px); display:flex; justify-content: space-between; align-items:center; padding: 15px 25px; }
+nav h1 { color: var(--choco-dark);}
+nav a { text-decoration:none; margin-left:15px; color: var(--text); font-weight:500; }
+
+.hero { background: linear-gradient(120deg,var(--choco-dark),var(--choco-mid)); color:white; padding: 80px 20px; text-align:center; position: relative; overflow:hidden; }
+.hero h2 { font-size: 2.5rem; }
+.hero p { opacity: 0.9; margin-top: 10px; }
+
+.floating span { position: absolute; font-size: 2rem; animation: float 6s infinite ease-in-out; opacity: 0.6; }
+.floating span:nth-child(1){ top: 20%; left: 10%; }
+.floating span:nth-child(2){ top: 60%; left: 80%; animation-delay:2s; }
+.floating span:nth-child(3){ top: 40%; left: 50%; animation-delay:4s; }
+@keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-25px); } }
+
+.search { margin:30px auto; text-align:center; }
+.search input{ width:80%; max-width:400px; padding:12px 18px; border-radius:25px; border:2px solid var(--choco-mid); outline:none; }
+
+.filters { text-align:center; margin-bottom:20px; }
+.filters button{ background: var(--cream); border:none; padding:10px 18px; border-radius:20px; margin:6px; cursor:pointer; box-shadow:0 5px 12px rgba(0,0,0,.15); }
+.filters button:hover { background: var(--choco-mid); color:white; }
+
+.grid { max-width:1200px; margin:auto; padding:20px; display:grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap:25px; }
+.card{ background: rgba(255,255,255,0.85); border-radius:25px; padding:15px; text-align:center; transition:0.3s; }
+.card img{ width:100%; border-radius:20px; }
+.card:hover{ transform:translateY(-8px) scale(1.03); box-shadow:0 20px 30px rgba(0,0,0,.2); }
+
+.custom { background: var(--accent); padding:60px 20px; text-align:center; }
+.custom select, .custom button{ padding:10px 15px; border-radius:20px; border:none; margin:10px; }
+
+.about { padding:60px 20px; max-width:900px; margin:auto; text-align:center; }
+
+footer{ background: var(--choco-dark); color:white; padding:30px 20px; }
+footer input{ padding:8px 12px; border-radius:20px; border:none; }
+footer button{ padding:8px 15px; border-radius:20px; border:none; background: var(--choco-mid); color:white; }
+
+</style>
+</head>
+<body>
+
+<nav>
+  <h1>Sweet Sticker Garden 🍫🧋</h1>
+  <div>
+    <a href="#gallery">Gallery</a>
+    <a href="#custom">Customize</a>
+    <a href="#about">About</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <h2>Cozy Stickers for Your Sweet Soul</h2>
+  <p>Original kawaii stickers inspired by bubble tea, flowers & cute animals 🍫✨</p>
+  <div class="floating">
+    <span>🧋</span><span>🍫</span><span>🌸</span>
+  </div>
+</section>
+
+<div class="search">
+  <input type="text" placeholder="Search stickers (bubble tea, flowers, cute animals...)">
+</div>
+
+<div class="filters">
+  <button onclick="filter('all')">All</button>
+  <button onclick="filter('tea')">Bubble Tea</button>
+  <button onclick="filter('flower')">Flowers</button>
+  <button onclick="filter('cute')">Cute Animals</button>
+  <button onclick="filter('mix')">Mixed</button>
+  <button onclick="filter('decor')">Decorative</button>
+</div>
+
+<section class="grid" id="gallery">
+
+<!-- ================= BUBBLE TEA (20 stickers) ================= -->
+<div class="card tea"><img src="https://placehold.co/300x300/8B4513/FFF6EC?text=Bubble+Tea+1"><p>Choco Bubble Cup 1</p></div>
+<div class="card tea"><img src="https://placehold.co/300x300/D2691E/FFF6EC?text=Bubble+Tea+2"><p>Choco Bubble Cup 2</p></div>
+<div class="card tea"><img src="https://placehold.co/300x300/E6C7A2/8B4513?text=Bubble+Tea+3"><p>Choco Bubble Cup 3</p></div>
+<div class="card tea"><img src="https://placehold.co/300x300/8B4513/FFF6EC?text=Bubble+Tea+4"><p>Choco Bubble Cup 4</p></div>
+<div class="card tea"><img src="https://placehold.co/300x300/D2691E/FFF6EC?text=Bubble+Tea+5"><p>Choco Bubble Cup 5</p></div>
+<div class="card tea"><img src="https://placehold.co/300x300/E6C7A2/8B4513?text=Bubble+Tea+6"><p>Choco Bubble Cup 6</p></div>
+<div class="card tea"><img src="https://placehold.co/300x300/8B4513/FFF6EC?text=Bubble+Tea+7"><p>Choco Bubble Cup 7</p></div>
+<div class="card tea"><img src="https://placehold.co/300x300/D2691E/FFF6EC?text=Bubble+Tea+8"><p>Choco Bubble Cup 8</p></div>
+<div class="card tea"><img src="https://placehold.co/300x300/E6C7A2/8B4513?text=Bubble+Tea+9"><p>Choco Bubble Cup 9</p></div>
+<div class="card tea"><img src="https://placehold.co/300x300/8B4513/FFF6EC?text=Bubble+Tea+10"><p>Choco Bubble Cup 10</p></div>
+<div class="card tea"><img src="https://placehold.co/300x300/D2691E/FFF6EC?text=Bubble+Tea+11"><p>Choco Bubble Cup 11</p></div>
+<div class="card tea"><img src="https://placehold.co/300x300/E6C7A2/8B4513?text=Bubble+Tea+12"><p>Choco Bubble Cup 12</p></div>
+<div class="card tea"><img src="https://placehold.co/300x300/8B4513/FFF6EC?text=Bubble+Tea+13"><p>Choco Bubble Cup 13</p></div>
+<div class="card tea"><img src="https://placehold.co/300x300/D2691E/FFF6EC?text=Bubble+Tea+14"><p>Choco Bubble Cup 14</p></div>
+<div class="card tea"><img src="https://placehold.co/300x300/E6C7A2/8B4513?text=Bubble+Tea+15"><p>Choco Bubble Cup 15</p></div>
+<div class="card tea"><img src="https://placehold.co/300x300/8B4513/FFF6EC?text=Bubble+Tea+16"><p>Choco Bubble Cup 16</p></div>
+<div class="card tea"><img src="https://placehold.co/300x300/D2691E/FFF6EC?text=Bubble+Tea+17"><p>Choco Bubble Cup 17</p></div>
+<div class="card tea"><img src="https://placehold.co/300x300/E6C7A2/8B4513?text=Bubble+Tea+18"><p>Choco Bubble Cup 18</p></div>
+<div class="card tea"><img src="https://placehold.co/300x300/8B4513/FFF6EC?text=Bubble+Tea+19"><p>Choco Bubble Cup 19</p></div>
+<div class="card tea"><img src="https://placehold.co/300x300/D2691E/FFF6EC?text=Bubble+Tea+20"><p>Choco Bubble Cup 20</p></div>
+
+<!-- ================= FLOWERS (20 stickers) ================= -->
+<div class="card flower"><img src="https://placehold.co/300x300/8B4513/FFF6EC?text=Flower+1"><p>Chocolate Sakura 1</p></div>
+<div class="card flower"><img src="https://placehold.co/300x300/D2691E/FFF6EC?text=Flower+2"><p>Chocolate Sakura 2</p></div>
+<div class="card flower"><img src="https://placehold.co/300x300/E6C7A2/8B4513?text=Flower+3"><p>Chocolate Sakura 3</p></div>
+<div class="card flower"><img src="https://placehold.co/300x300/8B4513/FFF6EC?text=Flower+4"><p>Chocolate Sakura 4</p></div>
+<div class="card flower"><img src="https://placehold.co/300x300/D2691E/FFF6EC?text=Flower+5"><p>Chocolate Sakura 5</p></div>
+<div class="card flower"><img src="https://placehold.co/300x300/E6C7A2/8B4513?text=Flower+6"><p>Chocolate Sakura 6</p></div>
+<div class="card flower"><img src="https://placehold.co/300x300/8B4513/FFF6EC?text=Flower+7"><p>Chocolate Sakura 7</p></div>
+<div class="card flower"><img src="https://placehold.co/300x300/D2691E/FFF6EC?text=Flower+8"><p>Chocolate Sakura 8</p></div>
+<div class="card flower"><img src="https://placehold.co/300x300/E6C7A2/8B4513?text=Flower+9"><p>Chocolate Sakura 9</p></div>
+<div class="card flower"><img src="https://placehold.co/300x300/8B4513/FFF6EC?text=Flower+10"><p>Chocolate Sakura 10</p></div>
+<div class="card flower"><img src="https://placehold.co/300x300/D2691E/FFF6EC?text=Flower+11"><p>Chocolate Sakura 11</p></div>
+<div class="card flower"><img src="https://placehold.co/300x300/E6C7A2/8B4513?text=Flower+12"><p>Chocolate Sakura 12</p></div>
+<div class="card flower"><img src="https://placehold.co/300x300/8B4513/FFF6EC?text=Flower+13"><p>Chocolate Sakura 13</p></div>
+<div class="card flower"><img src="https://placehold.co/300x300/D2691E/FFF6EC?text=Flower+14"><p>Chocolate Sakura 14</p></div>
+<div class="card flower"><img src="https://placehold.co/300x300/E6C7A2/8B4513?text=Flower+15"><p>Chocolate Sakura 15</p></div>
+<div class="card flower"><img src="https://placehold.co/300x300/8B4513/FFF6EC?text=Flower+16"><p>Chocolate Sakura 16</p></div>
+<div class="card flower"><img src="https://placehold.co/300x300/D2691E/FFF6EC?text=Flower+17"><p>Chocolate Sakura 17</p></div>
+<div class="card flower"><img src="https://placehold.co/300x300/E6C7A2/8B4513?text=Flower+18"><p>Chocolate Sakura 18</p></div>
+<div class="card flower"><img src="https://placehold.co/300x300/8B4513/FFF6EC?text=Flower+19"><p>Chocolate Sakura 19</p></div>
+<div class="card flower"><img src="https://placehold.co/300x300/D2691E/FFF6EC?text=Flower+20"><p>Chocolate Sakura 20</p></div>
+
+<!-- ================= CUTE ANIMALS (20 stickers) ================= -->
+<div class="card cute"><img src="https://placehold.co/300x300/E6C7A2/8B4513?text=Animal+1"><p>Choco Bunny 1</p></div>
+<div class="card cute"><img src="https://placehold.co/300x300/8B4513/FFF6EC?text=Animal+2"><p>Choco Bunny 2</p></div>
+<div class="card cute"><img src="https://placehold.co/300x300/D2691E/FFF6EC?text=Animal+3"><p>Choco Bunny 3</p></div>
+<div class="card cute"><img src="https://placehold.co/300x300/E6C7A2/8B4513?text=Animal+4"><p>Choco Bunny 4</p></div>
+<div class="card cute"><img src="https://placehold.co/300x300/8B4513/FFF6EC?text=Animal+5"><p>Choco Bunny 5</p></div>
+<div class="card cute"><img src="https://placehold.co/300x300/D2691E/FFF6EC?text=Animal+6"><p>Choco Bunny 6</p></div>
+<div class="card cute"><img src="https://placehold.co/300x300/E6C7A2/8B4513?text=Animal+7"><p>Choco Bunny 7</p></div>
+<div class="card cute"><img src="https://placehold.co/300x300/8B4513/FFF6EC?text=Animal+8"><p>Choco Bunny 8</p></div>
+<div class="card cute"><img src="https://placehold.co/300x300/D2691E/FFF6EC?text=Animal+9"><p>Choco Bunny 9</p></div>
+<div class="card cute"><img src="https://placehold.co/300x300/E6C7A2/8B4513?text=Animal+10"><p>Choco Bunny 10</p></div>
+<div class="card cute"><img src="https://placehold.co/300x300/8B4513/FFF6EC?text=Animal+11"><p>Choco Bunny 11</p></div>
+<div class="card cute"><img src="https://placehold.co/300x300/D2691E/FFF6EC?text=Animal+12"><p>Choco Bunny 12</p></div>
+<div class="card cute"><img src="https://placehold.co/300x300/E6C7A2/8B4513?text=Animal+13"><p>Choco Bunny 13</p></div>
+<div class="card cute"><img src="https://placehold.co/300x300/8B4513/FFF6EC?text=Animal+14"><p>Choco Bunny 14</p></div>
+<div class="card cute"><img src="https://placehold.co/300x300/D2691E/FFF6EC?text=Animal+15"><p>Choco Bunny 15</p></div>
+<div class="card cute"><img src="https://placehold.co/300x300/E6C7A2/8B4513?text=Animal+16"><p>Choco Bunny 16</p></div>
+<div class="card cute"><img src="https://placehold.co/300x300/8B4513/FFF6EC?text=Animal+17"><p>Choco Bunny 17</p></div>
+<div class="card cute"><img src="https://placehold.co/300x300/D2691E/FFF6EC?text=Animal+18"><p>Choco Bunny 18</p></div>
+<div class="card cute"><img src="https://placehold.co/300x
